@@ -77,7 +77,7 @@ impl Runtime {
             if diff.len() != 0 {
                 let message = diff.iter().map(|x| x.to_string() + ",").collect::<String>();
                 eprintln!("ERROR: Columns [{message}] not found");
-                std::process::exit(1);
+                return;
             }
         }
 
